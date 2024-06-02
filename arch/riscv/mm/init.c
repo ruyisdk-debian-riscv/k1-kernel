@@ -279,7 +279,12 @@ static void __init setup_bootmem(void)
 	max_low_pfn = max_pfn = PFN_DOWN(phys_ram_end);
 	high_memory = (void *)(__va(PFN_PHYS(max_low_pfn)));
 
+	#ifdef CONFIG_SOC_SPACEMIT_K1X
+	/* 2GB~4GB is IO area on spacemit-k1x, will be reserved when early_init_fdt_scan_reserved_mem */
+	dma32_phys_limit = min(2UL * SZ_1G, (unsigned long)PFN_PHYS(max_low_pfn));
+	#else
 	dma32_phys_limit = min(4UL * SZ_1G, (unsigned long)PFN_PHYS(max_low_pfn));
+	#endif
 	set_max_mapnr(max_low_pfn - ARCH_PFN_OFFSET);
 
 	reserve_initrd_mem();
