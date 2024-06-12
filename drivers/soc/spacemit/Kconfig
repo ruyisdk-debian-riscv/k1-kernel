@@ -1,0 +1,27 @@
+# SPDX-License-Identifier: GPL-2.0-only
+#
+# spacemit Soc drivers
+#
+config SPACEMIT_PM_DOMAINS
+	bool "Spacemit generic power domain"
+	depends on PM && SOC_SPACEMIT
+	default SOC_SPACEMIT
+	help
+	  Say y here to enable power domain support.
+	  In order to meet high performance and low power requirements, a power
+	  management unit is designed or saving power.
+
+config SPACEMIT_REBOOT_CONTROL
+	tristate "Spacemit k1x reboot handler"
+	depends on SOC_SPACEMIT_K1X
+	default SOC_SPACEMIT_K1X
+	help
+	  Spacemit reboot into fastboot mode
+
+config SPACEMI_K1X_DMA_RANGE
+	tristate "Spacemit dram range driver for k1x"
+	depends on SOC_SPACEMIT_K1X
+	default SOC_SPACEMIT_K1X
+	help
+	  This driver is an empty shell, in order to make the dma-ranges function
+          effective
