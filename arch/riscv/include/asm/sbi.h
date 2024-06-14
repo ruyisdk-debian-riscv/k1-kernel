@@ -52,6 +52,9 @@ enum sbi_ext_base_fid {
 	SBI_EXT_BASE_GET_MVENDORID,
 	SBI_EXT_BASE_GET_MARCHID,
 	SBI_EXT_BASE_GET_MIMPID,
+#if defined(CONFIG_SOC_SPACEMIT_K1PRO) || defined(CONFIG_SOC_SPACEMIT_K1X)
+	SBI_EXT_BASE_FLUSH_CACHE_ALL,
+#endif
 };
 
 enum sbi_ext_time_fid {
@@ -347,6 +350,10 @@ int sbi_remote_hfence_vvma_asid(const struct cpumask *cpu_mask,
 				unsigned long size,
 				unsigned long asid);
 long sbi_probe_extension(int ext);
+
+#if defined(CONFIG_SOC_SPACEMIT_K1PRO) || defined(CONFIG_SOC_SPACEMIT_K1X)
+void sbi_flush_local_dcache_all(void);
+#endif
 
 /* Check if current SBI specification version is 0.1 or not */
 static inline int sbi_spec_is_0_1(void)
