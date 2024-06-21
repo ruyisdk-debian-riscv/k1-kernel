@@ -837,7 +837,7 @@ static int gmc_v6_0_sw_init(void *handle)
 
 	adev->gmc.mc_mask = 0xffffffffffULL;
 
-	r = dma_set_mask_and_coherent(adev->dev, DMA_BIT_MASK(40));
+	r = dma_set_mask_and_coherent(adev->dev, DMA_BIT_MASK(32));
 	if (r) {
 		dev_warn(adev->dev, "No suitable DMA available.\n");
 		return r;
