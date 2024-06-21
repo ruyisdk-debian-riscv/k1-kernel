@@ -73,7 +73,7 @@ static pgprot_t drm_io_prot(struct drm_local_map *map,
 	if (map->type == _DRM_REGISTERS && !(map->flags & _DRM_WRITE_COMBINING))
 		tmp = pgprot_noncached(tmp);
 	else
-		tmp = pgprot_writecombine(tmp);
+		tmp = pgprot_noncached(tmp);
 #elif defined(__ia64__)
 	if (efi_range_is_wc(vma->vm_start, vma->vm_end -
 				    vma->vm_start))
@@ -93,7 +93,7 @@ static pgprot_t drm_dma_prot(uint32_t map_type, struct vm_area_struct *vma)
 #if defined(__powerpc__) && defined(CONFIG_NOT_COHERENT_CACHE)
 	tmp = pgprot_noncached_wc(tmp);
 #endif
-	tmp = pgprot_writecombine(tmp);
+	tmp = pgprot_noncached(tmp);
 	return tmp;
 }
 
