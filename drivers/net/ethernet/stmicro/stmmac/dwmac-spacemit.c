@@ -270,8 +270,8 @@ static int spacemit_dwmac_probe(struct platform_device *pdev)
 				      plat_dat->multicast_filter_bins);
 	plat_dat->has_gmac = 1;
 	plat_dat->pmt = 1;
-	plat_dat->multi_msi_en = 0;
-	plat_dat->addr64 = spacemit_plat_dat->data->addr_width;
+	plat_dat->dma_cfg->multi_msi_en = 0;
+	plat_dat->host_dma_width = spacemit_plat_dat->data->addr_width;
 	plat_dat->enh_desc = 1;
 
 	ret = spacemit_dwmac_init(pdev, plat_dat->bsp_priv);
