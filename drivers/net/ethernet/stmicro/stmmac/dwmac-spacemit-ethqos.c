@@ -217,7 +217,7 @@ static int spacemit_ethqos_probe(struct platform_device *pdev)
 	if (ret)
 		return ret;
 
-	plat_dat = stmmac_probe_config_dt(pdev, stmmac_res.mac);
+	plat_dat = devm_stmmac_probe_config_dt(pdev, stmmac_res.mac);
 	if (IS_ERR(plat_dat)) {
 		dev_err(&pdev->dev, "dt configuration failed\n");
 		return PTR_ERR(plat_dat);
@@ -271,7 +271,7 @@ err_clk:
 	data->remove(pdev);
 
 err_mem:
-	stmmac_remove_config_dt(pdev, plat_dat);
+	/* stmmac_remove_config_dt(pdev, plat_dat); */
 
 	return ret;
 }
@@ -299,7 +299,7 @@ static int spacemit_ethqos_remove(struct platform_device *pdev)
 	if (err < 0)
 		dev_err(&pdev->dev, "failed to remove subdriver: %d\n", err);
 
-	stmmac_remove_config_dt(pdev, priv->plat);
+	/* stmmac_remove_config_dt(pdev, priv->plat); */
 
 	return err;
 }
