@@ -134,7 +134,7 @@ static int spacemit_dwmac_init(struct platform_device *pdev, void *bsp_priv)
 	return 0;
 }
 
-static void spacemit_dwmac_fix_speed(void *bsp_priv, unsigned int speed)
+static void spacemit_dwmac_fix_speed(void *bsp_priv, unsigned int speed, unsigned int mode)
 {
 	struct spacemit_dwmac_priv_data *spacemit_plat_dat = bsp_priv;
 
