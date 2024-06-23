@@ -351,3 +351,4 @@ static struct platform_driver k1x_thermal_driver = {
 };
 
 module_platform_driver(k1x_thermal_driver);
+MODULE_LICENSE("GPL");
