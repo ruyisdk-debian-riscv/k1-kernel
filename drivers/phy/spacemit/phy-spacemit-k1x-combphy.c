@@ -250,3 +250,4 @@ static struct platform_driver spacemit_combphy_driver = {
 	},
 };
 module_platform_driver(spacemit_combphy_driver);
+MODULE_LICENSE("GPL");
