@@ -222,7 +222,7 @@ static int spacemit_dwmac_probe(struct platform_device *pdev)
 		return ret;
 
 	if (pdev->dev.of_node) {
-		plat_dat = stmmac_probe_config_dt(pdev, stmmac_res.mac);
+		plat_dat = devm_stmmac_probe_config_dt(pdev, stmmac_res.mac);
 		if (IS_ERR(plat_dat)) {
 			dev_err(&pdev->dev, "dt configuration failed\n");
 			return PTR_ERR(plat_dat);
@@ -287,8 +287,8 @@ err_exit:
 		plat_dat->exit(pdev, plat_dat->bsp_priv);
 err_remove_config_dt:
 err_match_data:
-	if (pdev->dev.of_node)
-		stmmac_remove_config_dt(pdev, plat_dat);
+/*	if (pdev->dev.of_node)
+		stmmac_remove_config_dt(pdev, plat_dat); */
 
 	return ret;
 }
