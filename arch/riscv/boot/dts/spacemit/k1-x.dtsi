@@ -778,12 +778,11 @@
 		};
 
 		uart0: serial@d4017000 {
-			compatible = "spacemit,pxa-uart";
+			compatible = "intel,xscale-uart";
 			reg = <0x0 0xd4017000 0x0 0x100>;
 			interrupt-parent = <&intc>;
 			interrupts = <42>;
-			clock-names = "func", "gate";
-			clocks = <&ccu CLK_UART1>, <&ccu CLK_SLOW_UART>;
+			clock-frequency = <14000000>;
 			reg-shift = <2>;
 			reg-io-width = <4>;
 			status = "ok";
