@@ -46,9 +46,9 @@
 			model = "Spacemit(R) X60";
 			reg = <0>;
 			status = "okay";
-			riscv,isa = "rv64imafdcv";
+			riscv,isa = "rv64imafdc";
 			riscv,isa-base = "rv64i";
-			riscv,isa-extensions = "i", "m", "a", "f", "d", "c", "v",
+			riscv,isa-extensions = "i", "m", "a", "f", "d", "c",
 					"zicbom", "zicboz", "zicntr", "zicond",
 					"zicsr", "zifencei", "zihintpause", "zihpm",
 					"zfh", "zfhmin", "zba", "zbb", "zbc", "zbs",
@@ -80,9 +80,9 @@
 			status = "okay";
 			compatible = "riscv";
 			model = "Spacemit(R) X60";
-			riscv,isa = "rv64imafdcv";
+			riscv,isa = "rv64imafdc";
 			riscv,isa-base = "rv64i";
-			riscv,isa-extensions = "i", "m", "a", "f", "d", "c", "v",
+			riscv,isa-extensions = "i", "m", "a", "f", "d", "c",
 					"zicbom", "zicboz", "zicntr", "zicond",
 					"zicsr", "zifencei", "zihintpause", "zihpm",
 					"zfh", "zfhmin", "zba", "zbb", "zbc", "zbs",
@@ -114,9 +114,9 @@
 			status = "okay";
 			compatible = "riscv";
 			model = "Spacemit(R) X60";
-			riscv,isa = "rv64imafdcv";
+			riscv,isa = "rv64imafdc";
 			riscv,isa-base = "rv64i";
-			riscv,isa-extensions = "i", "m", "a", "f", "d", "c", "v",
+			riscv,isa-extensions = "i", "m", "a", "f", "d", "c",
 					"zicbom", "zicboz", "zicntr", "zicond",
 					"zicsr", "zifencei", "zihintpause", "zihpm",
 					"zfh", "zfhmin", "zba", "zbb", "zbc", "zbs",
@@ -148,9 +148,9 @@
 			status = "okay";
 			compatible = "riscv";
 			model = "Spacemit(R) X60";
-			riscv,isa = "rv64imafdcv";
+			riscv,isa = "rv64imafdc";
 			riscv,isa-base = "rv64i";
-			riscv,isa-extensions = "i", "m", "a", "f", "d", "c", "v",
+			riscv,isa-extensions = "i", "m", "a", "f", "d", "c",
 					"zicbom", "zicboz", "zicntr", "zicond",
 					"zicsr", "zifencei", "zihintpause", "zihpm",
 					"zfh", "zfhmin", "zba", "zbb", "zbc", "zbs",
@@ -182,9 +182,9 @@
 			status = "okay";
 			compatible = "riscv";
 			model = "Spacemit(R) X60";
-			riscv,isa = "rv64imafdcv";
+			riscv,isa = "rv64imafdc";
 			riscv,isa-base = "rv64i";
-			riscv,isa-extensions = "i", "m", "a", "f", "d", "c", "v",
+			riscv,isa-extensions = "i", "m", "a", "f", "d", "c",
 					"zicbom", "zicboz", "zicntr", "zicond",
 					"zicsr", "zifencei", "zihintpause", "zihpm",
 					"zfh", "zfhmin", "zba", "zbb", "zbc", "zbs",
@@ -216,9 +216,9 @@
 			status = "okay";
 			compatible = "riscv";
 			model = "Spacemit(R) X60";
-			riscv,isa = "rv64imafdcv";
+			riscv,isa = "rv64imafdc";
 			riscv,isa-base = "rv64i";
-			riscv,isa-extensions = "i", "m", "a", "f", "d", "c", "v",
+			riscv,isa-extensions = "i", "m", "a", "f", "d", "c",
 					"zicbom", "zicboz", "zicntr", "zicond",
 					"zicsr", "zifencei", "zihintpause", "zihpm",
 					"zfh", "zfhmin", "zba", "zbb", "zbc", "zbs",
@@ -250,9 +250,9 @@
 			status = "okay";
 			compatible = "riscv";
 			model = "Spacemit(R) X60";
-			riscv,isa = "rv64imafdcv";
+			riscv,isa = "rv64imafdc";
 			riscv,isa-base = "rv64i";
-			riscv,isa-extensions = "i", "m", "a", "f", "d", "c", "v",
+			riscv,isa-extensions = "i", "m", "a", "f", "d", "c",
 					"zicbom", "zicboz", "zicntr", "zicond",
 					"zicsr", "zifencei", "zihintpause", "zihpm",
 					"zfh", "zfhmin", "zba", "zbb", "zbc", "zbs",
@@ -284,9 +284,9 @@
 			status = "okay";
 			compatible = "riscv";
 			model = "Spacemit(R) X60";
-			riscv,isa = "rv64imafdcv";
+			riscv,isa = "rv64imafdc";
 			riscv,isa-base = "rv64i";
-			riscv,isa-extensions = "i", "m", "a", "f", "d", "c", "v",
+			riscv,isa-extensions = "i", "m", "a", "f", "d", "c",
 					"zicbom", "zicboz", "zicntr", "zicond",
 					"zicsr", "zifencei", "zihintpause", "zihpm",
 					"zfh", "zfhmin", "zba", "zbb", "zbc", "zbs",
