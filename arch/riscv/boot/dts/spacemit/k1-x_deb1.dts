@@ -900,19 +900,46 @@
 };
 
 &cpu_0 {
-	clst0-supply = <&dcdc_1>;
-	vin-supply-names = "clst0";
+	cpu-supply = <&dcdc_1>;
+};
+
+&cpu_1 {
+	cpu-supply = <&dcdc_1>;
+};
+
+&cpu_2 {
+	cpu-supply = <&dcdc_1>;
+};
+
+&cpu_3 {
+	cpu-supply = <&dcdc_1>;
+};
+
+&cpu_4 {
+	cpu-supply = <&dcdc_1>;
+};
+
+&cpu_5 {
+	cpu-supply = <&dcdc_1>;
+};
+
+&cpu_6 {
+	cpu-supply = <&dcdc_1>;
+};
+
+&cpu_7 {
+	cpu-supply = <&dcdc_1>;
 };
 
 &clst0_core_opp_table {
 	opp1600000000 {
-		opp-microvolt = <1050000>;
+		opp-microvolt = <1050000 950000 1050000>;
 	};
 };
 
 &clst1_core_opp_table {
 	opp1600000000 {
-		opp-microvolt = <1050000>;
+		opp-microvolt = <1050000 950000 1050000>;
 	};
 };
 
